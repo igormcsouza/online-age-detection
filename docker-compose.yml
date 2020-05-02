@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: >
+        gunicorn -b 0.0.0.0:7899
+        --access-logfile -
+        --reload
+        "app:app"
+    volumes: 
+        - ./app/:/online-age-detection/
+    ports: 
+        - 7899:7899
