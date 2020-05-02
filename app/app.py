@@ -34,7 +34,7 @@ def main():
 
         new_detection = ad(image, 'detectors/face-detector', 'detectors/age-detector', 0.5)
         answer = new_detection.detect()
-        # res['image'] = encode(answer['image'])
+        res['image'] = encode(answer['image']) 
         res['age'] = answer['age']
         res['ageConfidence'] = str(answer['ageConfidence'])
         res['roi'] = str(answer['roi'])
