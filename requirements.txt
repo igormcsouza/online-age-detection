@@ -3,4 +3,6 @@ gunicorn==19.9.0
 
 # Age-Detection requirements
 opencv-python==4.2.0.34
+opencv-contrib-python==4.2.0.34
 imutils==0.5.3
+numpy==1.18.3
