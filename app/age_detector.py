@@ -13,14 +13,14 @@ class AgeDetector:
         self.confidence = confidence
 
     def _loading_detectors(self):
-        print("[INFO] loading face detector model from disk...")
+        print("[AGE_DETECTION][INFO] loading face detector model from disk...")
         prototxtPath = os.path.sep.join([self.face, "deploy.prototxt"])
         weightsPath = os.path.sep.join([
             self.face, "res10_300x300_ssd_iter_140000.caffemodel"
         ])
         faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 
-        print("[INFO] loading age detector model from disk...")
+        print("[AGE_DETECTION][INFO] loading age detector model from disk...")
         prototxtPath = os.path.sep.join([self.age, "age_deploy.prototxt"])
         weightsPath = os.path.sep.join([self.age, "age_net.caffemodel"])
         ageNet = cv2.dnn.readNet(prototxtPath, weightsPath)
@@ -41,7 +41,7 @@ class AgeDetector:
         (h, w) = self.image.shape[:2]
         blob = cv2.dnn.blobFromImage(self.image, 1.0, size=size, mean=mean)
 
-        print("[INFO] computing face detections...")
+        print("[AGE_DETECTION][INFO] computing face detections...")
         faceNet.setInput(blob)
         detections = faceNet.forward()
 
@@ -73,7 +73,7 @@ class AgeDetector:
                 ageConfidence = preds[0][i]
                 # display the predicted age to our terminal
                 text = "{}: {:.2f}%".format(age, ageConfidence * 100)
-                print("[INFO] {}".format(text))
+                print("[AGE_DETECTION][INFO] {}".format(text))
                 # draw the bounding box of the face along with the associated
                 # predicted age
                 y = startY - 10 if startY - 10 > 10 else startY + 10
