@@ -3,7 +3,7 @@ from .age_detector import AgeDetector as ad
 import numpy as np
 import cv2
 import os
-from utils import encode
+from .utils import encode
 from flask_cors import CORS
 
 app = Flask(__name__)
