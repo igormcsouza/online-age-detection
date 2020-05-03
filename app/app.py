@@ -32,11 +32,13 @@ def main():
         npimg = np.fromstring(filestr, np.uint8)
         image = cv2.imdecode(npimg, cv2.IMREAD_UNCHANGED)
 
-        new_detection = ad(image, 'detectors/face-detector', 'detectors/age-detector', 0.5)
+        new_detection = ad(image, 'app/detectors/face-detector', 'app/detectors/age-detector', 0.5)
         answer = new_detection.detect()
         res['image'] = encode(answer['image']) 
         res['age'] = answer['age']
         res['ageConfidence'] = str(answer['ageConfidence'])
         res['roi'] = str(answer['roi'])
+
+        print(res)
 
         return jsonify(res)
