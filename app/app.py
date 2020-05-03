@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect, jsonify
-from age_detector import AgeDetector as ad
+from .age_detector import AgeDetector as ad
 import numpy as np
 import cv2
 import os
