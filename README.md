@@ -6,7 +6,7 @@ Esse repo é o lado do servidor. Mais sobre o frontend pode ser encontrado [nest
 
 ## Como usar o sevidor?
 
-Você pode usar o container que tem aqui para montar seu próprio serviço, ou pode usar a versão disponível no heroku. Para usar é só fazer uma requisição ao servidor abaixo
+Você pode usar o container que tem aqui para montar seu próprio serviço, ou pode usar a versão disponível no heroku. Para usar é só fazer uma requisição ao servidor abaixo,
 
     https://online-age-detection.herokuapp.com/age-detection
 
