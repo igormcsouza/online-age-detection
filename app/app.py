@@ -7,7 +7,7 @@ from utils import encode
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app) 
+CORS(app)
 
 res = dict(
     roi=[], age=None, message='No file Found', 
