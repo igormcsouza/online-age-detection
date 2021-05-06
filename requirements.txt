@@ -1,6 +1,6 @@
 Flask==1.1.2
 gunicorn==19.9.0
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 
 # Age-Detection requirements
 opencv-python-headless
