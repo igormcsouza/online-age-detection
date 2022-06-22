@@ -5,4 +5,4 @@ Flask-Cors==3.0.8
 # Age-Detection requirements
 opencv-python-headless
 imutils==0.5.3
-numpy==1.18.3
+numpy==1.22.0
